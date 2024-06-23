@@ -19,28 +19,49 @@
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
 
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <style>
+            .whatsapp {
+                position: fixed;
+                width: 60px;
+                height: 60px;
+                bottom: 40px;
+                right: 40px;
+                background-color: #25d366;
+                color: #FFF;
+                border-radius: 50px;
+                text-align: center;
+                font-size: 30px;
+                z-index: 100;
+            }
+            .whatsapp-icon {
+                margin-top: 13px;
+            }
+        </style>
     </head>
-<!--
-Vanilla Template
-https://templatemo.com/tm-526-vanilla
--->
+
 <body>
+
+    <!-- BOTON FLOTANTE DE WHATSAPP -->
+    <a href="http://wa.me/523315742583" class="whatsapp" target="_blank"> <i class="fa fa-whatsapp whatsapp-icon"></i></a>
+
 
     <div class="fixed-side-navbar">
         <ul class="nav flex-column">
-            <li class="nav-item"><a class="nav-link" href="#home"><span>Intro</span></a></li>
-            <li class="nav-item"><a class="nav-link" href="#services"><span>Nosotros</span></a></li>
-            <li class="nav-item"><a class="nav-link" href="#portfolio"><span>Servicios</span></a></li>
-            <li class="nav-item"><a class="nav-link" href="#our-story"><span>¿Por qué elegir?</span></a></li>
-            <li class="nav-item"><a class="nav-link" href="#contact-us"><span>Contáctanos</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="#home"><span>Home</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="#services"><span>About Us</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="#our-story"><span>Services</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="#team"><span>Team</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="#gallery"><span>Gallery</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact-us"><span>Contact</span></a></li>
         </ul>
     </div>
 
     <div class="parallax-content baner-content" id="home">
         <div class="container">
             <div class="first-content">
+                <img width="10%" src="./img/logo.svg" alt="">
                 <h1>Casa Zoe</h1>
-                <span class="pt-4"><em>¡DESCUBRE UNA VIDA PLENA Y ENRIQUECEDORA!</em> </span>
+                <span class="pt-4"><em>Assisted living  ͦ  Nursing home</em> </span>
                 <!-- <div class="primary-button">
                     <a href="#services">Discover More</a>
                 </div> -->
@@ -53,44 +74,39 @@ https://templatemo.com/tm-526-vanilla
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <div class="left-text">
-                        <h4>Sobre Casa Zoe</h4>
+                    <div class="left-text" >
+                        <h4 class="text-color">Discover a new and enriching life</h4>
                         <div class="line-dec"></div>
-                        <p class="text-justify">Casa zoe care ofrece los cuidados que la vida y cuidados del adulto mayor requiere, en una
-                            increíble ubicación en Ajijic, Jalisco. Nuestro complejo está ubicado a tan solo 1 cuadra del
-                            lago, lo cual nos permite brindar a nuestros huéspedes oportunidades recreativas llenas de
-                            color y un magnifico clima.
-                            ¡Descubre una vida plena y enriquecedora con Casa Zoé!</p>
+                        <p class="text-justify">Welcome to Casa Zoe! Casa Zoe Care offers the care that life and care for the elderly requires, in an incredible location in Ajijic, Jalisco. Our community is located just 1 block from the lake, which allows us to provide our guests with recreational opportunities full of color and a magnificent climate. As Mexicans, it is natural to take care of our grandparents, to be kind and respectful. We venerate and care for seniors we want to protect them Discover a full and enriching life with Casa Zoé!
+                        </p>
                         <!-- <ul>
                             <li>-  Praesent porta urna id eros</li>
                             <li>-  Curabitur consectetur malesuada</li>
                             <li>-  Nam pretium imperdiet enim</li>
                             <li>-  Sed viverra arcu non nisi efficitur</li>
                         </ul> -->
-                        <div class="primary-button">
+                        <!-- <div class="primary-button">
                             <a href="#portfolio">Opciones de vivienda</a>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div class="col-md-8">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="service-item">
-                                <h4>Misión</h4>
+                                <h4>Mission</h4>
                                 <div class="line-dec"></div>
-                                <p>Ofrecer un servicio personalizado lleno de calidez y dedicación que te haga sentir como en
-                                    casa, permitiéndote disfrutar de la enriquecedora cultura y el ambiente único que ofrece
-                                    Ajijic, Jalisco.</p>
+                                <p>Our mission is to provide personalized services that are characterized by warmth, professionalism, and dedication, thereby fostering a sense of familiarity and enabling you to appreciate the distinctive atmosphere and enriching culture of Ajijic, Jalisco.
+                                </p>
                                     <br><br>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="service-item">
-                                <h4>Visión</h4>
+                                <h4>Vision</h4>
                                 <div class="line-dec"></div>
-                                <p>Ofrecer el bienestar que merecen los adultos mayores mediante una vida asistida, con
-                                    cuidados de salud profesionales que garantizan una estadía cómoda y placentera. Nuestro
-                                    objetivo es proporcionar una experiencia digna para compartir con sus seres queridos.</p>
+                                <p>To provide the well-being that older individuals deserve through assisted living, with professional health care that ensures a comfortable and enjoyable stay. We strive to offer a quality experience that you will be proud to share with your loved ones.
+                                </p>
                             </div>
                         </div>
                         <!--<div class="col-md-6">
@@ -113,58 +129,166 @@ https://templatemo.com/tm-526-vanilla
         </div>
     </div>
 
+
+    <div class="tabs-content" id="our-story">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 mx-auto">
+                    <div class="wrapper">
+                    <section id="first-tab-group" class="tabgroup">
+                      <div id="tab1">
+                        <img src="https://cdn.aarp.net/content/aarpe/es/home/recursos-para-el-cuidado/elegir-hogar/info-2016/centros-de-cuidado-de-adultos/_jcr_content/root/container_main/container_body_main/container_body1/container_body_cf/container_image/articlecontentfragment/cfimage.coreimg.50.932.jpeg/content/dam/aarp/caregiving/2024/03/1140-adult-day-care-esp.jpg" alt="">
+                        <p class="text-justify">Assisted living is chosen for different reasons and we know no two stories are exactly alike. Some individuals choose assisted living because they need a little help living life fully. Some crave social opportunities and the close comfort of friends. Others no longer want the responsibility of upkeep for their home, and want to benefit from others to cook, clean, do laundry and more. No matter your reason for a move to assisted living, you can find what you need here at Sage Glendale.</p>
+                        <p style="margin: 0; padding-top: 0; padding-bottom: 0; text-align: left;">Assisted Living Fees Include:</p>
+                        <ul class="text-left">    
+                            <li>24-hour trained on-site staffing</li>
+                            <li>3 meals daily, plus snacks</li>
+                            <li>Recreational and physical activities</li>
+                            <li>Cognitive-occupational dynamics</li>
+                            <li>Medical follow-up</li>
+                        </ul>                        
+                      </div>
+                      <div id="tab2">
+                        <img src="https://chile.hwcglat.com/wp-content/uploads/2016/07/aoidhsk-1140x480.jpg" alt="">
+                        <p class="text-justify">We know that living with memory loss due to dementia is challenging. We look past the disease and focus on the individual. By providing customized care that’s exactly what someone needs to live safely and with dignity, and by getting to know residents personally, we can ensure that those in memory care at Sage Glendale will thrive while living life in our community. We’ll ensure the support they need, along with fun, life-enriching opportunities every day.</p>
+                        <p style="margin: 0; padding-top: 0; padding-bottom: 0; text-align: left;">Memory care Fees Include:</p>
+                        <ul class="text-left">    
+                            <li>24-hour trained on-site staffing</li>
+                            <li>3 meals daily, plus snacks</li>
+                            <li>Recreational and physical activities</li>
+                            <li>Cognitive-occupational dynamics</li>
+                            <li>Medical follow-up</li>
+                        </ul>  
+                      </div>
+                      <div id="tab3">
+                        <img src="https://siempremexico.com.mx/wp-content/uploads/slider/cache/404c336c3d9fa1ec89901028c4a075b1/Siempre-Mexico_slide_2b.jpg" alt="">
+                        <p class="text-justify">Our Home Care services is designed to provide specialized assistance to seniors who prefer to live in the comfort of their own homes. We tailor our care to their lifestyle, desires and needs, considering all the elements to enhance their quality of life.</p>
+                        <p style="margin: 0; padding-top: 0; padding-bottom: 0; text-align: left;">We offer the following services:</p>
+                        <ul class="text-left">    
+                            <li>Nursing services</li>
+                            <li>Medical care</li>
+                            <li>Meal services</li>
+                            <li>Laundry services</li>
+                            <li>Transportation assistance</li>
+                            <li>Companionship</li>
+                            <li>Engaging activities</li>
+                            <li>Emergency button</li>
+                        </ul>  
+                      </div>
+                      <!-- <div id="tab4">
+                        <img src="img/4th-tab.jpg" alt="">
+                        <p>Duis risus nulla, elementum vitae nisi a, ornare maximus nisl. Morbi et vehicula est. Cras at vulputate justo. Cras eu nulla metus. Ut et pretium velit. Pellentesque at neque tristique.</p>
+                      </div> -->
+                    </section>
+                    <ul class="tabs clearfix" data-tabgroup="first-tab-group">
+                      <li><a href="#tab1" class="active">Assisted Living</a></li>
+                      <li><a href="#tab2">Memory care</a></li>
+                      <li><a href="#tab3">Home care</a></li>
+                      <!-- <li><a href="#tab4">2019 - Now</a></li> -->
+                    </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     
-    <div class="parallax-content projects-content" id="portfolio">
+    <div class="parallax-content projects-content" id="team">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <div id="owl-testimonials" class="owl-carousel owl-theme">
                         <div class="item">
                             <div class="testimonials-item">
-                                <a href="https://portalgeriatrico.com.ar/wp-content/uploads/2020/03/enfermeria-3ra-edad-1024x683.jpg" data-lightbox="image-1"><img src="https://portalgeriatrico.com.ar/wp-content/uploads/2020/03/enfermeria-3ra-edad-1024x683.jpg" alt=""></a>
+                                <a href="./img/team/Ricardo.jpeg">
+                                    <img src="./img/team/Ricardo.jpeg" alt="Ricardo" />
+                                </a>
                                 <div class="text-content">
-                                    <h4>Vida asistida</h4>
-                                    <ul class="text-left">
-                                        <li>Enfermera 24/7</li>
-                                        <li>5 comidas</li>
-                                        <li>Actividades recreativas y físicas</li>
-                                        <li>Dinámicas cognitivo-ocupacional</li>
-                                        <li>Seguimiento Médico</li>
-                                    </ul>
+                                    <h4 class="mb-0">Ricardo</h4>
+                                    <small>Founder and Operations</small>
+                                    <p class="text-center p-2">
+                                        A lover of dance and service, Ricardo, along with his wife, oversees all the details of Casa Zoe's staff and residents. He is kind and fully committed to this project.
+                                    </p>
+                                </div>
+                            </div>                            
+                        </div>
+                        <div class="item">
+                            <div class="testimonials-item">
+                                <a href="./img/team/Angela.jpeg">
+                                    <img src="./img/team/Angela.jpeg" alt="Angela" />
+                                </a>
+                                <div class="text-content">
+                                    <h4 class="mb-0">Angela Ceja </h4>
+                                    <small>Founder and Cook</small>
+                                    <p class="text-center p-2">Born in Ajijic, has over 20 years of experience in food preparation. From a young age, she has learned Mexican recipes, and her passion is to delight others with her roots while serving older adults with love and enthusiasm.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="item">
                             <div class="testimonials-item">
-                                <a href="https://promedicas.mx/lapaz/wp-content/uploads/2021/01/carta-de-derechos-personal-.de-enfermeria.jpg" data-lightbox="image-1"><img src="https://promedicas.mx/lapaz/wp-content/uploads/2021/01/carta-de-derechos-personal-.de-enfermeria.jpg" alt=""></a>
+                                <a href="./img/team/yadira.jpeg">
+                                    <img src="./img/team/yadira.jpeg" alt="Yarida" />
+                                </a>
                                 <div class="text-content">
-                                    <h4>Cuidados de la memoria</h4>
-                                    <ul class="text-left">
-                                        <li>Enfermera 24/7</li>
-                                        <li>5 comidas</li>
-                                        <li>Actividades recreativas y físicas</li>
-                                        <li>Dinámicas cognitivo-ocupacional</li>
-                                        <li>Seguimiento Médico</li>
-                                    </ul>
+                                    <h4 class="mb-0">Yadira Montoya</h4>
+                                    <small>Caregiver</small>
+                                    <p class="text-center p-2">Yadira joined Casa Zoe in 2020, caring for older adults with dedication. Her work is extremely important, attending to the residents' daily lives, personal care, nutrition, and physical and emotional well-being</p>
                                 </div>
                             </div>
                         </div>
                         <div class="item">
                             <div class="testimonials-item">
-                                <a href="https://cuidadoadultomayor.com/wp-content/uploads/2022/04/servicio-de-enfermeria-a-domicilio.jpg" data-lightbox="image-1"><img src="https://cuidadoadultomayor.com/wp-content/uploads/2022/04/servicio-de-enfermeria-a-domicilio.jpg" alt=""></a>
+                                <a href="./img/team/Yolanda.jpeg">
+                                    <img src="./img/team/Yolanda.jpeg" alt="Yolanda" />
+                                </a>
                                 <div class="text-content">
-                                    <h4>Cuidados en casa</h4>
-                                    <ul class="text-left">
-                                        <li>Servicio de enfermería /cuidadores.</li>
-                                        <li>Servicio médico</li>
-                                        <li>Comida</li>
-                                        <li>Lavandería y limpieza</li>
-                                        <li>Transporte</li>
-                                        <li>Botón de emergencia</li>
-                                    </ul>
+                                    <h4 class="mb-0">Yolanda Sanchez</h4>
+                                    <small>Nurse</small>
+                                    <p class="text-center p-2">Yolanda provides personalized attention to patients.
+                                        "I am happy in my work and to belong to Casa Zoe, doing what I like the most, serving others."
+                                        </p>
                                 </div>
                             </div>
                         </div>
+                        <!-- <div class="item">
+                            <div class="testimonials-item">
+                                <a href="./img/team/Rox.jpeg">
+                                    <img src="./img/team/Rox.jpeg" alt="Rox" />
+                                </a>
+                                <div class="text-content">
+                                    <h4 class="mb-0">Rox</h4>
+                                    <small>Caregiver</small>
+                                    <p class="text-center p-2"></p>
+                                </div>
+                            </div>
+                        </div> -->
+                        <div class="item">
+                            <div class="testimonials-item">
+                                <a href="./img/team/Pablo.jpeg">
+                                    <img src="./img/team/Pablo.jpeg" alt="Pablo" />
+                                </a>
+                                <div class="text-content">
+                                    <h4 class="mb-0">Pablo </h4>
+                                    <small>Helper</small>
+                                    <p class="text-center p-2">Pablo takes care of the details at Casa Zoe, such as maintaining the residents areas, helping with the preparation of meals and providing support where necessary. He is passionate about the arts.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="testimonials-item">
+                                <a href="./img/selected/Testimonio_1.jpeg">
+                                    <img src="./img/selected/Testimonio_1.jpeg" alt="Pablo" />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="testimonials-item">
+                                <a href="./img/selected/Testimonio_2.jpeg">
+                                    <img src="./img/selected/Testimonio_2.jpeg" alt="Pablo" />
+                                </a>
+                            </div>
+                        </div>
+                        
                         <!-- <div class="item">
                             <div class="testimonials-item">
                                 <a href="img/4th-big-item.jpg" data-lightbox="image-1"><img src="img/4th-item.jpg" alt=""></a>
@@ -214,58 +338,56 @@ https://templatemo.com/tm-526-vanilla
                 </div>
             </div>
         </div>
+        
     </div>
 
 
-    <div class="tabs-content" id="our-story">
+
+
+
+
+    <div class="parallax-content projects-content" id="gallery">
         <div class="container">
+            <!-- Gallery -->
             <div class="row">
-                <div class="col-md-8 mx-auto">
-                    <div class="wrapper">
-                    <section id="first-tab-group" class="tabgroup">
-                      <div id="tab1">
-                        <img src="https://cdn.aarp.net/content/aarpe/es/home/recursos-para-el-cuidado/elegir-hogar/info-2016/centros-de-cuidado-de-adultos/_jcr_content/root/container_main/container_body_main/container_body1/container_body_cf/container_image/articlecontentfragment/cfimage.coreimg.50.932.jpeg/content/dam/aarp/caregiving/2024/03/1140-adult-day-care-esp.jpg" alt="">
-                        <p class="text-justify">La vida asistida se elige por diferentes razones y sabemos que no hay dos historias
-                            exactamente iguales. Algunas personas eligen la vida asistida porque necesitan un poco de
-                            ayuda para vivir plenamente. Algunos anhelan oportunidades sociales y la comodidad de
-                            sus amigos. Otros ya no quieren la responsabilidad del mantenimiento de su hogar y
-                            quieren apoyarse para cocinar, limpiar, lavar la ropa y más. No importa el motivo por el que
-                            se muda a una vida asistida, puede encontrar lo que necesita aquí..</p>
-                      </div>
-                      <div id="tab2">
-                        <img src="https://chile.hwcglat.com/wp-content/uploads/2016/07/aoidhsk-1140x480.jpg" alt="">
-                        <p class="text-justify">Sabemos que vivir con pérdida de memoria debido a la demencia es un desafío. Miramos
-                            más allá de la enfermedad y nos centramos en el individuo. Al brindar atención
-                            personalizada que es exactamente lo que alguien necesita para vivir de manera segura y
-                            digna, y al conocer personalmente a los residentes, podemos garantizar que quienes
-                            reciben cuidados de memoria en Casa zoe prosperen mientras viven la vida en nuestra
-                            comunidad. Garantizamos el apoyo que necesitan, junto con oportunidades divertidas y
-                            enriquecedoras para sus vidas todos los días.</p>
-                      </div>
-                      <div id="tab3">
-                        <img src="https://siempremexico.com.mx/wp-content/uploads/slider/cache/404c336c3d9fa1ec89901028c4a075b1/Siempre-Mexico_slide_2b.jpg" alt="">
-                        <p class="text-justify">Brindamos atención especializada a adultos mayores que prefieren vivir cómodamente en
-                            sus propios hogares.</p>
-                      </div>
-                      <!-- <div id="tab4">
-                        <img src="img/4th-tab.jpg" alt="">
-                        <p>Duis risus nulla, elementum vitae nisi a, ornare maximus nisl. Morbi et vehicula est. Cras at vulputate justo. Cras eu nulla metus. Ut et pretium velit. Pellentesque at neque tristique.</p>
-                      </div> -->
-                    </section>
-                    <ul class="tabs clearfix" data-tabgroup="first-tab-group">
-                      <li><a href="#tab1" class="active">Vida asistida</a></li>
-                      <li><a href="#tab2">Cuidados de la memoria</a></li>
-                      <li><a href="#tab3">Cuidados en casa:</a></li>
-                      <!-- <li><a href="#tab4">2019 - Now</a></li> -->
-                    </ul>
-                    </div>
+                <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                    <img src="./img/selected/Carrusel_1.jpeg"
+                        class="w-100 shadow-1-strong rounded mb-4" alt="Boat on Calm Water" />
+    
+                    <img src="./img/selected/Carrusel_2.jpeg"
+                        class="w-100 shadow-1-strong rounded mb-4" alt="Wintry Mountain Landscape" />
+                </div>
+    
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <img src="./img/selected/Carrusel_3.jpeg"
+                        class="w-100 shadow-1-strong rounded mb-4" alt="Mountains in the Clouds" />
+    
+                    <img src="./img/selected/Carrusel_4.jpeg"
+                        class="w-100 shadow-1-strong rounded mb-4" alt="Boat on Calm Water" />
+                </div>
+    
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <img src="./img/selected/Carrusel_5.jpeg"
+                        class="w-100 shadow-1-strong rounded mb-4" alt="Waves at Sea" />
+    
+                    <img src="./img/selected/Portada.png"
+                        class="w-100 shadow-1-strong rounded mb-4" alt="Yosemite National Park" />
                 </div>
             </div>
+            <!-- Gallery -->
         </div>
+    
     </div>
+
+
+
 
 
     <div class="parallax-content contact-content" id="contact-us">
+        <video autoplay muted loop id="background-video">
+            <source src="./img/selected/Video_1.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
@@ -274,24 +396,24 @@ https://templatemo.com/tm-526-vanilla
                             <form id="contact" action="http://wa.me/523315742583" method="get">
                                 <div class="row">
                                     <div class="col-md-12">
-                                      <fieldset>
-                                        <input name="name" type="text" class="form-control" id="name" placeholder="Your name..." required="">
-                                      </fieldset>
+                                        <fieldset>
+                                            <input name="name" type="text" class="form-control" id="name" placeholder="Your name..." required="">
+                                        </fieldset>
                                     </div>
                                     <div class="col-md-12">
-                                      <fieldset>
-                                        <input name="email" type="text" class="form-control" id="email" placeholder="Your email..." required="">
-                                      </fieldset>
+                                        <fieldset>
+                                            <input name="email" type="text" class="form-control" id="email" placeholder="Your email..." required="">
+                                        </fieldset>
                                     </div>
                                     <div class="col-md-12">
-                                      <fieldset>
-                                        <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your message..." required=""></textarea>
-                                      </fieldset>
+                                        <fieldset>
+                                            <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your message..." required=""></textarea>
+                                        </fieldset>
                                     </div>
                                     <div class="col-md-12">
-                                      <fieldset>
-                                        <button type="submit" id="form-submit" class="btn">Send Message</button>
-                                      </fieldset>
+                                        <fieldset>
+                                            <button type="submit" id="form-submit" class="btn">Send Message</button>
+                                        </fieldset>
                                     </div>
                                 </div>
                             </form>
@@ -300,28 +422,22 @@ https://templatemo.com/tm-526-vanilla
                 </div>
                 <div class="col-md-6">
                     <div class="map">
-                    <!-- How to change your own map point
-                           1. Go to Google Maps
-                           2. Click on your location point
-                           3. Click "Share" and choose "Embed map" tab
-                           4. Copy only URL and paste it within the src="" field below
-                    -->
-
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3742.02463310589!2d-103.26895189999999!3d20.2992475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842f47b8d6a56a59%3A0x272c4d7c25ce698d!2sCasa%20Zoe!5e0!3m2!1ses-419!2smx!4v1717118813524!5m2!1ses-419!2smx" width="100%" height="390" frameborder="0" style="border:0" allowfullscreen></iframe>
-                        
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    
+    
 
     <footer>
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="primary-button">
+                    <!-- <div class="primary-button">
                         <a href="#home">Regresar al inicio</a>
-                    </div>
+                    </div> -->
                     <ul>
                         <li><a href="https://www.facebook.com/profile.php?id=61559186878651&mibextid=LQQJ4d"><i class="fa fa-facebook"></i></a></li>
                         <li><a href="https://www.instagram.com/casazoecare?igsh=ODdpdHZ4bTRrNW93&utm_source=qr"><i class="fa fa-instagram"></i></a></li>

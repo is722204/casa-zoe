@@ -10,7 +10,6 @@ p {
   font-size: 15px;
   line-height: 25px;
 }
-
 section {
   padding: 25px 0 35px;
   background: #fff;
@@ -144,10 +143,10 @@ a:hover { color: #FF0; }
 
 
 .baner-content {
-  padding-top: 30vh;
+  padding-top: 15vh;
   text-align: center;
   position: relative; /* Necesario para que el overlay se posicione correctamente */
-  background-image: url(https://www.unir.net/wp-content/uploads/2022/02/enfermeriacabecera-6-1-e1675339650987.jpg);
+  background-image: url(../img/selected/Portada.png);
   background-size: cover; /* Asegura que la imagen cubra todo el área */
   background-position: center;
 }
@@ -202,7 +201,7 @@ a:hover { color: #FF0; }
   padding-left: 15px;
   padding-right: 15px;
   padding-top: 15vh;
-  background-image: url(../img/2nd-section.jpg);
+  background-image: url(../img/backgrounds/bg1.avif);
   background-attachment: fixed;
   min-height: 100vh;
   background-size: cover;
@@ -265,7 +264,7 @@ h4, .h4 {
 
 .projects-content {
   padding-top: 20vh;
-  background-image: url(../img/3rd-section.jpg);
+  background-image: url(../img/backgrounds/bg2.avif);
 }
 
 .projects-content .item img {
@@ -319,7 +318,7 @@ h4, .h4 {
   padding-left: 15px;
   padding-right: 15px;
   padding-top: 8vh;
-  background-image: url(../img/4th-section.jpg);
+  background-image: url(../img/backgrounds/bg3.png);
   background-attachment: fixed;
   min-height: 100vh;
   background-size: cover;
@@ -377,6 +376,19 @@ section {
   padding: 25px;
 }
 
+.tabgroup p {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 25px;
+  margin-bottom: 0;
+}
+.tabgroup ul {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 35px;
+  padding-top: 0;
+}
+
 .clearfix:after {
   content:"";
   display:table;
@@ -384,12 +396,37 @@ section {
 }
 
 
-.contact-content {
+/* .contact-content {
   padding-left: 15px;
   padding-right: 15px;
   padding-top: 16vh;
-  background-image: url(../img/5th-section.jpg);
+  background-image: url(../img/backgrounds/bg4.jpg);
+} */
+
+.contact-content {
+  position: relative;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 16vh;
+  overflow: hidden;
 }
+
+#background-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.contact-content .container {
+  position: relative;
+  z-index: 1;
+}
+
 
 .contact-form {
   background-color: rgba(0, 0, 0, 0.5);
