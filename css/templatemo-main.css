@@ -544,11 +544,14 @@ footer em {
   font-weight: 600;
   font-style: normal;
 }
+.dot {
+  margin: 0 0px; /* Ajusta el margen según sea necesario */
+}
 
 @media (max-width: 767px){
   
   .baner-content {
-    padding-top: 30vh;
+    padding-top: 20vh;
   }
 
   .baner-content h1 {
