@@ -387,7 +387,7 @@
                 <div class="col-md-6">
                     <div class="contact-form">
                         <div class="row">
-                            <form id="contact" action="http://wa.me/523315742583" method="get">
+                            <form id="contact" onsubmit="sendWhatsAppMessage(event)">
                                 <div class="row">
                                     <div class="col-md-12">
                                         <fieldset>
@@ -396,7 +396,7 @@
                                     </div>
                                     <div class="col-md-12">
                                         <fieldset>
-                                            <input name="email" type="text" class="form-control" id="email" placeholder="Your email..." required="">
+                                            <input name="email" type="email" class="form-control" id="email" placeholder="Your email..." required="">
                                         </fieldset>
                                     </div>
                                     <div class="col-md-12">
@@ -411,6 +411,7 @@
                                     </div>
                                 </div>
                             </form>
+                            
                         </div>
                     </div>
                 </div>
@@ -462,8 +463,29 @@
             document.getElementById(cityName).style.display = "block";  
         }
     </script>
+    <script>
+        function sendWhatsAppMessage(event) {
+            event.preventDefault();  // Prevenir la acción por defecto del formulario
+        
+            // Obtener los valores de los campos del formulario
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+        
+            // Crear el mensaje de WhatsApp
+            const whatsappMessage = `Nombre: ${name}%0AEmail: ${email}%0AMensaje: ${message}`;
+        
+            // Crear la URL de WhatsApp con el número y el mensaje
+            const whatsappUrl = `https://wa.me/523315742583?text=${whatsappMessage}`;
+        
+            // Redirigir a la URL de WhatsApp
+            window.location.href = whatsappUrl;
+        }
+        </script>
+        
 
     <script>
+        
         $(document).ready(function(){
           // Add smooth scrolling to all links
           $(".fixed-side-navbar a, .primary-button a").on('click', function(event) {
