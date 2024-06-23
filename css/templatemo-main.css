@@ -161,7 +161,7 @@ a:hover { color: #FF0; }
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Color negro con 50% de opacidad */
+  /* background-color: rgba(0, 0, 0, 0.5);  */
   z-index: 1; /* Posiciona el overlay por encima del fondo pero debajo del contenido */
 }
 
@@ -584,7 +584,7 @@ footer em {
   }
 
   .service-content .service-item {
-    background-color: rgba(0, 0, 0, 0.5);
+    /* background-color: rgba(0, 0, 0, 0.5); */
     padding: 25px 30px;
     text-align: center;
     color: #388D9B;
