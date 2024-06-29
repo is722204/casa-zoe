@@ -100,7 +100,7 @@ a:hover { color: #FF0; }
   width: 10px;
   height: 10px;
   border-radius: 10px;
-  background: rgba(250, 250, 250, 0.75);
+  background: rgb(26 111 104);
   -webkit-transition: all .3s;
   transition: all .3s;
   -webkit-transform: scale(0.6);
@@ -248,11 +248,11 @@ h4, .h4 {
 }
 
 .service-content .service-item {
-  /* background-color: rgba(0, 0, 0, 0.5); */
+  background-color: rgb(83 146 157 / 30%);
   padding: 25px 30px;
   text-align: center;
   /* color: #388D9B; */
-  color: #388D9B;
+  color: black;
   margin-bottom: 30px;
 }
 

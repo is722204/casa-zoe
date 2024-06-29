@@ -137,7 +137,7 @@
                     <div class="wrapper">
                     <section id="first-tab-group" class="tabgroup">
                       <div id="tab1">
-                        <p style="padding-top: 0;">ASSISTED LIVING</p>
+                        <h2 style="padding-top: 0; color: #1a6f68;">ASSISTED LIVING</h2>
                         <img src="https://cdn.aarp.net/content/aarpe/es/home/recursos-para-el-cuidado/elegir-hogar/info-2016/centros-de-cuidado-de-adultos/_jcr_content/root/container_main/container_body_main/container_body1/container_body_cf/container_image/articlecontentfragment/cfimage.coreimg.50.932.jpeg/content/dam/aarp/caregiving/2024/03/1140-adult-day-care-esp.jpg" alt="">
                         <p class="text-justify">Assisted living is chosen for different reasons and we know no two stories are exactly alike. Some individuals choose assisted living because they need a little help living life fully. Some crave social opportunities and the close comfort of friends. Others no longer want the responsibility of upkeep for their home, and want to benefit from others to cook, clean, do laundry and more. No matter your reason for a move to assisted living, you can find what you need here at Sage Glendale.</p>
                         <p style="margin: 0; padding-top: 0; padding-bottom: 0; text-align: left;">Assisted Living Fees Include:</p>
@@ -150,7 +150,7 @@
                         </ul>                        
                       </div>
                       <div id="tab2">
-                        <p style="padding-top: 0;">MEMORY CARE</p>
+                        <h2 style="padding-top: 0; color: #1a6f68;">MEMORY CARE</h2>
                         <img src="https://chile.hwcglat.com/wp-content/uploads/2016/07/aoidhsk-1140x480.jpg" alt="">
                         <p class="text-justify">We know that living with memory loss due to dementia is challenging. We look past the disease and focus on the individual. By providing customized care that’s exactly what someone needs to live safely and with dignity, and by getting to know residents personally, we can ensure that those in memory care at Sage Glendale will thrive while living life in our community. We’ll ensure the support they need, along with fun, life-enriching opportunities every day.</p>
                         <p style="margin: 0; padding-top: 0; padding-bottom: 0; text-align: left;">Memory care Fees Include:</p>
@@ -163,7 +163,7 @@
                         </ul>  
                       </div>
                       <div id="tab3">
-                        <p style="padding-top: 0;">HOME CARE</p>
+                        <h2 style="padding-top: 0; color: #1a6f68;">HOME CARE</h2>
                         <img src="https://siempremexico.com.mx/wp-content/uploads/slider/cache/404c336c3d9fa1ec89901028c4a075b1/Siempre-Mexico_slide_2b.jpg" alt="">
                         <p class="text-justify">Our Home Care services is designed to provide specialized assistance to seniors who prefer to live in the comfort of their own homes. We tailor our care to their lifestyle, desires and needs, considering all the elements to enhance their quality of life.</p>
                         <p style="margin: 0; padding-top: 0; padding-bottom: 0; text-align: left;">We offer the following services:</p>
@@ -233,7 +233,7 @@
                                 </a>
                                 <div class="text-content">
                                     <h4 class="mb-0">Yadira Montoya</h4>
-                                    <small>Caregiver</small>
+                                    <small>Nurse</small>
                                     <p class="text-center p-2">Yadira joined Casa Zoe in 2020, caring for older adults with dedication. Her work is extremely important, attending to the residents' daily lives, personal care, nutrition, and physical and emotional well-being</p>
                                 </div>
                             </div>
@@ -378,10 +378,11 @@
 
 
     <div class="parallax-content contact-content" id="contact-us">
-        <video autoplay muted loop id="background-video">
+        <video autoplay muted loop playsinline id="background-video">
             <source src="./img/selected/Video_1.mp4" type="video/mp4">
             Your browser does not support HTML5 video.
         </video>
+        
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
@@ -454,6 +455,14 @@
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          var video = document.getElementById('background-video');
+          video.play().catch(function(error) {
+            console.log('Autoplay prevented:', error);
+          });
+        });
+      </script>
+    <script>
         function openCity(cityName) {
             var i;
             var x = document.getElementsByClassName("city");
@@ -473,7 +482,7 @@
             const message = document.getElementById('message').value;
         
             // Crear el mensaje de WhatsApp
-            const whatsappMessage = `Nombre: ${name}%0AEmail: ${email}%0AMensaje: ${message}`;
+            const whatsappMessage = `Name: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
         
             // Crear la URL de WhatsApp con el número y el mensaje
             const whatsappUrl = `https://wa.me/523315742583?text=${whatsappMessage}`;
