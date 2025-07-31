@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casa Zoe Care - Assisted Living & Nursing Home</title>
+    <meta name="description" content="Casa Zoe offers personalized care for seniors in Ajijic, Jalisco. Assisted living, memory care and home care services with professional staff.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="icon" href="./img/logo.svg">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1a6f68',
+                        secondary: '#4A5568',
+                        accent: '#4299E1',
+                    },
+                    fontFamily: {
+                        sans: ['Open Sans', 'sans-serif'],
+                        serif: ['Georgia', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .swiper-slide {
+            transition: transform 0.3s ease;
+        }
+        .swiper-slide:hover {
+            transform: scale(1.02);
+        }
+        .hero-bg {
+            background-image: url('./img/selected/Portada.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .video-background {
+            position: relative;
+            overflow: hidden;
+        }
+        .video-background video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: 0;
+            transform: translateX(-50%) translateY(-50%);
+        }
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.3);
+            z-index: 1;
+        }
+        .video-content {
+            position: relative;
+            z-index: 2;
+        }
+        @media (max-width: 768px) {
+            .hero-bg {
+                background-position: 65% center;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-white">
+    <!-- WhatsApp Floating Button -->
+    <a href="http://wa.me/523315742583" class="fixed bottom-8 right-8 z-50 w-14 h-14 bg-green-500 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-colors duration-300" target="_blank">
+        <i class="fab fa-whatsapp text-white text-2xl"></i>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 bg-white shadow-md z-40 py-4 px-6">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="#home" class="flex items-center">
+                <img src="./img/logo.svg" alt="Casa Zoe Logo" class="h-12">
+                <span class="ml-3 text-xl font-semibold text-primary hidden md:block">Casa Zoe Care</span>
+            </a>
+            
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="text-secondary hover:text-primary transition-colors">Home</a>
+                <a href="#about" class="text-secondary hover:text-primary transition-colors">About Us</a>
+                <a href="#services" class="text-secondary hover:text-primary transition-colors">Services</a>
+                <a href="#team" class="text-secondary hover:text-primary transition-colors">Our Team</a>
+                <a href="#gallery" class="text-secondary hover:text-primary transition-colors">Gallery</a>
+                <a href="#contact" class="text-secondary hover:text-primary transition-colors">Contact</a>
+            </div>
+            
+            <button class="md:hidden text-gray-600 focus:outline-none" id="menu-toggle">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-white w-full py-4 px-6 absolute left-0 shadow-lg" id="mobile-menu">
+            <a href="#home" class="block py-2 text-secondary hover:text-primary">Home</a>
+            <a href="#about" class="block py-2 text-secondary hover:text-primary">About Us</a>
+            <a href="#services" class="block py-2 text-secondary hover:text-primary">Services</a>
+            <a href="#team" class="block py-2 text-secondary hover:text-primary">Our Team</a>
+            <a href="#gallery" class="block py-2 text-secondary hover:text-primary">Gallery</a>
+            <a href="#contact" class="block py-2 text-secondary hover:text-primary">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden hero-bg">
+        <div class="absolute inset-0 bg-black bg-opacity-40 z-0"></div>
+        <div class="relative max-w-7xl mx-auto px-6 text-center z-10">
+            <img src="./img/logo.svg" alt="Casa Zoe Logo" class="w-40 mx-auto mb-8">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">Casa Zoe Care</h1>
+            <p class="text-xl md:text-2xl text-white max-w-3xl mx-auto mb-10">
+                Assisted living <span class="text-accent">•</span> Nursing home <span class="text-accent">•</span> Personalized care
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="./community.html" class="bg-primary hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-medium transition-colors duration-300">
+                    Discover Our Community
+                </a>
+                <a href="#contact" class="bg-white hover:bg-gray-100 text-primary px-8 py-3 rounded-lg font-medium transition-colors duration-300">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Discover a Full and Enriching Life</h2>
+                <div class="w-20 h-1 bg-accent mx-auto mb-6"></div>
+                <p class="text-lg text-secondary max-w-3xl mx-auto">
+                    Casa Zoe offers the care that life for the elderly requires in an incredible location in Ajijic, Jalisco.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <p class="text-secondary mb-6">
+                        Our community is located just 1 block from the lake, which allows us to provide our guests with recreational opportunities full of color and a magnificent climate. As Mexicans, it is natural to take care of our grandparents, to be kind and respectful. We venerate and care for seniors. We want to protect them.
+                    </p>
+                    <p class="text-secondary mb-6">
+                        ¡Discover a full and enriching life with Casa Zoé!
+                    </p>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-gray-50 p-6 rounded-lg border-l-4 border-primary">
+                            <h3 class="text-xl font-semibold text-primary mb-3">Our Mission</h3>
+                            <p class="text-secondary">
+                                Provide personalized services with warmth, professionalism, and dedication, fostering familiarity and appreciation of Ajijic's culture.
+                            </p>
+                        </div>
+                        <div class="bg-gray-50 p-6 rounded-lg border-l-4 border-primary">
+                            <h3 class="text-xl font-semibold text-primary mb-3">Our Vision</h3>
+                            <p class="text-secondary">
+                                Provide the well-being that older individuals deserve through professional health care ensuring a comfortable and enjoyable stay.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="rounded-xl overflow-hidden shadow-lg">
+                    <img src="./img/team/900x700 assisted living.png" alt="Casa Zoe Community" class="w-full h-auto object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Our Care Services</h2>
+                <div class="w-20 h-1 bg-accent mx-auto mb-6"></div>
+                <p class="text-lg text-secondary max-w-3xl mx-auto">
+                    Comprehensive care options designed to meet the unique needs of each individual
+                </p>
+            </div>
+            
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper pb-12">
+                    <!-- Assisted Living -->
+                    <div class="swiper-slide bg-white rounded-xl overflow-hidden shadow-md">
+                        <img src="./img/team/900x700 assisted living.png" alt="Assisted Living" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold text-primary mb-3">Assisted Living</h3>
+                            <p class="text-secondary mb-4">
+                                Assisted living is chosen for different reasons and we know no two stories are exactly alike. Some individuals choose assisted living because they need a little help living life fully.
+                            </p>
+                            <ul class="list-disc pl-5 text-secondary space-y-2 mb-4">
+                                <li>24-hour trained on-site staffing</li>
+                                <li>3 meals daily, plus snacks</li>
+                                <li>Recreational and physical activities</li>
+                                <li>Medical follow-up</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Memory Care -->
+                    <div class="swiper-slide bg-white rounded-xl overflow-hidden shadow-md">
+                        <img src="./img/team/900x700 memory care.png" alt="Memory Care" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold text-primary mb-3">Memory Care</h3>
+                            <p class="text-secondary mb-4">
+                                We know that living with memory loss due to dementia is challenging. We look past the disease and focus on the individual.
+                            </p>
+                            <ul class="list-disc pl-5 text-secondary space-y-2 mb-4">
+                                <li>Specialized memory care staff</li>
+                                <li>Structured daily routines</li>
+                                <li>Cognitive stimulation activities</li>
+                                <li>Secure environment</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Home Care -->
+                    <div class="swiper-slide bg-white rounded-xl overflow-hidden shadow-md">
+                        <img src="./img/team/900x700 home care.png" alt="Home Care" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold text-primary mb-3">Home Care</h3>
+                            <p class="text-secondary mb-4">
+                                Our Home Care services are designed to provide specialized assistance to seniors who prefer to live in the comfort of their own homes.
+                            </p>
+                            <ul class="list-disc pl-5 text-secondary space-y-2 mb-4">
+                                <li>Nursing care</li>
+                                <li>Personal caregivers</li>
+                                <li>Housekeeping services</li>
+                                <li>Companionship</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next text-primary"></div>
+                <div class="swiper-button-prev text-primary"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Our Dedicated Team</h2>
+                <div class="w-20 h-1 bg-accent mx-auto mb-6"></div>
+                <p class="text-lg text-secondary max-w-3xl mx-auto">
+                    Meet the compassionate professionals who make Casa Zoe a special place
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Ricardo -->
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <img src="./img/team/Ricardo.PNG" alt="Ricardo" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-primary mb-1">Ricardo</h3>
+                        <p class="text-sm text-secondary mb-4">Founder and Operations</p>
+                        <p class="text-secondary">
+                            A lover of dance and service, Ricardo oversees all the details of Casa Zoe's staff and residents with kindness and commitment.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Angela -->
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <img src="./img/team/Angela.PNG" alt="Angela" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-primary mb-1">Angela Ceja</h3>
+                        <p class="text-sm text-secondary mb-4">Founder and Cook</p>
+                        <p class="text-secondary">
+                            With over 20 years of experience, Angela delights residents with authentic Mexican recipes prepared with love and enthusiasm.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Yadira -->
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <img src="./img/team/yadira.PNG" alt="Yadira" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-primary mb-1">Yadira Montoya</h3>
+                        <p class="text-sm text-secondary mb-4">Nurse</p>
+                        <p class="text-secondary">
+                            Caring for older adults with dedication, attending to residents' daily lives, personal care, nutrition, and emotional well-being.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Pablo -->
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <img src="./img/team/Pablo.PNG" alt="Pablo" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-primary mb-1">Pablo</h3>
+                        <p class="text-sm text-secondary mb-4">Helper</p>
+                        <p class="text-secondary">
+                            Takes care of maintenance, meal preparation and support. Passionate about the arts and creating a welcoming environment.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Life at Casa Zoe</h2>
+                <div class="w-20 h-1 bg-accent mx-auto mb-6"></div>
+                <p class="text-lg text-secondary max-w-3xl mx-auto">
+                    Moments of joy, comfort and community at our facility
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="overflow-hidden rounded-lg shadow-lg">
+                    <img src="./img/selected/Carrusel_6.jpeg" alt="Casa Zoe" class="w-full h-64 object-cover hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-lg">
+                    <img src="./img/selected/Carrusel_4.jpeg" alt="Casa Zoe" class="w-full h-64 object-cover hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-lg">
+                    <img src="./img/selected/Carrusel_1.jpeg" alt="Casa Zoe" class="w-full h-64 object-cover hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-lg">
+                    <img src="./img/selected/Carrusel_2.jpeg" alt="Casa Zoe" class="w-full h-64 object-cover hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-lg">
+                    <img src="./img/selected/Carrusel_3.jpeg" alt="Casa Zoe" class="w-full h-64 object-cover hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-lg">
+                    <img src="./img/selected/Testimonio_1.jpeg" alt="Casa Zoe" class="w-full h-64 object-cover hover:scale-110 transition-transform duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section with Video Background -->
+<!-- Contact Section with Full Cover Video Background -->
+<section id="contact" class="py-20 relative overflow-hidden">
+    <!-- Video Background -->
+    <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover z-0">
+        <source src="./img/selected/video.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+    
+    <!-- Dark Overlay for better text readability -->
+    <div class="absolute inset-0 bg-black bg-opacity-40 z-1"></div>
+    
+    <!-- Content Container -->
+    <div class="relative max-w-7xl mx-auto px-6 z-10">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Contact Us</h2>
+            <div class="w-20 h-1 bg-white mx-auto mb-6"></div>
+            <p class="text-lg text-white max-w-3xl mx-auto">
+                We'd love to hear from you. Reach out to learn more about our care services.
+            </p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-12">
+            <!-- Contact Form -->
+            <div class="bg-white bg-opacity-90 p-8 rounded-xl shadow-md">
+                <h3 class="text-2xl font-semibold text-primary mb-6">Send Us a Message</h3>
+                <form id="contact-form" onsubmit="sendWhatsAppMessage(event)">
+                    <div class="mb-6">
+                        <label for="name" class="block text-secondary mb-2">Your Name</label>
+                        <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent" required>
+                    </div>
+                    <div class="mb-6">
+                        <label for="email" class="block text-secondary mb-2">Your Email</label>
+                        <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent" required>
+                    </div>
+                    <div class="mb-6">
+                        <label for="message" class="block text-secondary mb-2">Your Message</label>
+                        <textarea id="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent" required></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-primary hover:bg-blue-700 text-white py-3 px-6 rounded-lg font-medium transition-colors duration-300">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+            
+            <!-- Contact Info -->
+            <div>
+                <div class="bg-white bg-opacity-90 p-8 rounded-xl shadow-md mb-8">
+                    <h3 class="text-2xl font-semibold text-primary mb-6">Visit Us</h3>
+                    <div class="h-64 rounded-lg overflow-hidden mb-6">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3742.02463310589!2d-103.26895189999999!3d20.2992475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842f47b8d6a56a59%3A0x272c4d7c25ce698d!2sCasa%20Zoe!5e0!3m2!1ses-419!2smx!4v1717118813524!5m2!1ses-419!2smx" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-accent mt-1 mr-4"></i>
+                            <p class="text-secondary">Casa Zoe, Ajijic, Jalisco, Mexico</p>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-phone-alt text-accent mr-4"></i>
+                            <p class="text-secondary">+52 33 1574 2583 (WhatsApp available)</p>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-accent mr-4"></i>
+                            <p class="text-secondary">caszoericardo@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Social Media -->
+                <div class="bg-white bg-opacity-90 p-6 rounded-xl shadow-md">
+                    <h3 class="text-xl font-semibold text-primary mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/profile.php?id=61559186878651&mibextid=LQQJ4d" class="w-10 h-10 bg-blue-600 hover:bg-blue-700 text-white rounded-full flex items-center justify-center transition-colors duration-300" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/casazoecare?igsh=ODdpdHZ4bTRrNW93&utm_source=qr" class="w-10 h-10 bg-pink-600 hover:bg-pink-700 text-white rounded-full flex items-center justify-center transition-colors duration-300" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/523315742583" class="w-10 h-10 bg-green-500 hover:bg-green-600 text-white rounded-full flex items-center justify-center transition-colors duration-300" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Script for video autoplay on mobile -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const video = document.querySelector('#contact video');
+        if (video) {
+            video.play().catch(error => {
+                console.log('Autoplay prevented:', error);
+                // Fallback for mobile devices
+                video.muted = true;
+                video.play();
+            });
+        }
+    });
+</script>
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-12">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <a href="#home" class="flex items-center">
+                        <img src="./img/logo.svg" alt="Casa Zoe Logo" class="h-10">
+                        <span class="ml-3 text-xl font-semibold">Casa Zoe Care</span>
+                    </a>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="https://www.facebook.com/profile.php?id=61559186878651&mibextid=LQQJ4d" class="text-xl hover:text-accent transition-colors" target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/casazoecare?igsh=ODdpdHZ4bTRrNW93&utm_source=qr" class="text-xl hover:text-accent transition-colors" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/523315742583" class="text-xl hover:text-accent transition-colors" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-blue-700 text-center text-blue-200">
+                <p>&copy; 2024 Casa Zoe Care. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
+        // Initialize Swiper
+        const swiper = new Swiper(".mySwiper", {
+            loop: false,
+            spaceBetween: 20,
+            slidesPerView: 1,
+            centeredSlides: false,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                },
+            },
+        });
+
+        // WhatsApp message function
+        function sendWhatsAppMessage(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            const whatsappMessage = `Name: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
+            const whatsappUrl = `https://wa.me/523315742583?text=${whatsappMessage}`;
+            
+            window.open(whatsappUrl, '_blank');
+        }
+
+        // Ensure video plays on mobile devices
+        document.addEventListener('DOMContentLoaded', function() {
+            const video = document.querySelector('video');
+            if (video) {
+                video.play().catch(error => {
+                    console.log('Autoplay prevented:', error);
+                    // Fallback for mobile devices
+                    video.muted = true;
+                    video.play();
+                });
+            }
+        });
+    </script>
+</body>
+</html>
