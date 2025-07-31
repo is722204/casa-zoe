@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casa Zoe Community - Senior Living by Lake Chapala</title>
+    <meta name="description" content="A sanctuary of well-being, independence, and meaningful connection by Lake Chapala for seniors seeking a healthy, active lifestyle.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="icon" href="./img/logo.svg">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2C5282',
+                        secondary: '#4A5568',
+                        accent: '#4299E1',
+                    },
+                    fontFamily: {
+                        sans: ['Open Sans', 'sans-serif'],
+                        serif: ['Georgia', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .swiper-slide {
+            transition: transform 0.3s ease;
+        }
+        .swiper-slide:hover {
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-white">
+    <!-- WhatsApp Floating Button -->
+    <a href="http://wa.me/523315742583" class="fixed bottom-8 right-8 z-50 w-14 h-14 bg-green-500 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-colors duration-300" target="_blank">
+        <i class="fab fa-whatsapp text-white text-2xl"></i>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 bg-white shadow-md z-40 py-4 px-6">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="#home" class="flex items-center">
+                <img src="./img/logo.svg" alt="Casa Zoe Logo" class="h-12">
+                <span class="ml-3 text-xl font-semibold text-primary hidden md:block">Casa Zoe Community</span>
+            </a>
+            
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="text-secondary hover:text-primary transition-colors">Home</a>
+                <a href="#about" class="text-secondary hover:text-primary transition-colors">About Us</a>
+                <a href="#services" class="text-secondary hover:text-primary transition-colors">Services</a>
+                <a href="#gallery" class="text-secondary hover:text-primary transition-colors">Gallery</a>
+                <a href="#contact" class="text-secondary hover:text-primary transition-colors">Contact</a>
+            </div>
+            
+            <button class="md:hidden text-gray-600 focus:outline-none" id="menu-toggle">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-white w-full py-4 px-6 absolute left-0 shadow-lg" id="mobile-menu">
+            <a href="#home" class="block py-2 text-secondary hover:text-primary">Home</a>
+            <a href="#about" class="block py-2 text-secondary hover:text-primary">About Us</a>
+            <a href="#services" class="block py-2 text-secondary hover:text-primary">Services</a>
+            <a href="#gallery" class="block py-2 text-secondary hover:text-primary">Gallery</a>
+            <a href="#contact" class="block py-2 text-secondary hover:text-primary">Contact</a>
+        </div>
+    </nav>
+    
+
+    <section id="home" class="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden">
+        <!-- Imagen de fondo -->
+        <div 
+          class="absolute inset-0 bg-cover bg-center" 
+          style="background-image: url('./img/community/hero.jpg'); filter: brightness(0.3); z-index: 0;">
+        </div>
+      
+        <!-- Capa con el mismo gradiente -->
+        <!-- <div class="absolute inset-0 bg-gradient-to-r from-blue-50 to-gray-50 opacity-80 z-[1]"></div> -->
+      
+        <!-- Contenido principal -->
+        <div class="relative max-w-7xl mx-auto px-6 text-center z-10">
+          <img src="./img/logo.svg" alt="Casa Zoe Logo" class="w-40 mx-auto mb-8">
+          <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">Casa Zoe Community</h1>
+          <p class="text-xl md:text-2xl text-white max-w-3xl mx-auto mb-10">
+            A sanctuary of well-being, independence, and meaningful connection by Lake Chapala
+          </p>
+          <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <a href="#contact" class="bg-primary hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-medium transition-colors duration-300">
+              Contact Us
+            </a>
+          </div>
+        </div>
+    </section>
+      
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Welcome to Our Community</h2>
+                <div class="w-20 h-1 bg-accent mx-auto mb-6"></div>
+                <p class="text-lg text-secondary max-w-3xl mx-auto">
+                    Thoughtfully designed for seniors seeking a healthy, active, and fulfilling lifestyle in the beautiful surroundings of Lake Chapala.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-semibold text-primary mb-4">Our Philosophy</h3>
+                    <p class="text-secondary mb-6">
+                        At Casa Zoe, we believe in creating a community that fosters independence while providing the support needed for a vibrant senior lifestyle. Our approach combines modern amenities with personalized care.
+                    </p>
+                    <h3 class="text-2xl font-semibold text-primary mb-4">The Lake Chapala Advantage</h3>
+                    <p class="text-secondary">
+                        Nestled by the shores of Mexico's largest freshwater lake, our community offers year-round perfect weather, stunning views, and a welcoming international community that makes every day feel like a vacation.
+                    </p>
+                </div>
+                <div class="rounded-xl overflow-hidden shadow-lg">
+                    <img src="./img/community/1.jpeg" alt="Casa Zoe Community" class="w-full h-auto object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Our Services & Amenities</h2>
+                <div class="w-20 h-1 bg-accent mx-auto mb-6"></div>
+                <p class="text-lg text-secondary max-w-3xl mx-auto">
+                    Comprehensive care and activities designed to enrich the lives of our residents
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service Card 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <div class="text-accent text-4xl mb-4">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-primary mb-3">Elegant Accommodations</h3>
+                    <p class="text-secondary">
+                        Spacious living quarters with premium amenities, designed for comfort and accessibility.
+                    </p>
+                </div>
+                
+                <!-- Service Card 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <div class="text-accent text-4xl mb-4">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-primary mb-3">Gourmet Dining</h3>
+                    <p class="text-secondary">
+                        Fresh, healthy meals prepared daily by our professional chefs, with dietary accommodations.
+                    </p>
+                </div>
+                
+                <!-- Service Card 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <div class="text-accent text-4xl mb-4">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-primary mb-3">Wellness Programs</h3>
+                    <p class="text-secondary">
+                        Tai chi, yoga, massage therapy, and other relaxation techniques to promote wellbeing.
+                    </p>
+                </div>
+                
+                <!-- Service Card 4 -->
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <div class="text-accent text-4xl mb-4">
+                        <i class="fas fa-tshirt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-primary mb-3">Housekeeping</h3>
+                    <p class="text-secondary">
+                        Professional laundry and cleaning services to maintain a pristine living environment.
+                    </p>
+                </div>
+                
+                <!-- Service Card 5 -->
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <div class="text-accent text-4xl mb-4">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-primary mb-3">Social Events</h3>
+                    <p class="text-secondary">
+                        Live music, social gatherings, and enriching workshops to foster community connections.
+                    </p>
+                </div>
+                
+                <!-- Service Card 6 -->
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <div class="text-accent text-4xl mb-4">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-primary mb-3">Membership Benefits</h3>
+                    <p class="text-secondary">
+                        Silver & Gold memberships with exclusive benefits and priority access to all amenities.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Life at Casa Zoe</h2>
+                <div class="w-20 h-1 bg-accent mx-auto mb-6"></div>
+                <p class="text-lg text-secondary max-w-3xl mx-auto">
+                    Explore our beautiful community and the vibrant lifestyle we offer
+                </p>
+            </div>
+            
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper pb-12">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <img src="./img/community/1.jpeg" class="w-full h-64 md:h-80 object-cover rounded-lg cursor-pointer" alt="Casa Zoe Community" onclick="openModal(this.src)">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/community/2.jpg" class="w-full h-64 md:h-80 object-cover rounded-lg cursor-pointer" alt="Casa Zoe Community" onclick="openModal(this.src)">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/community/3.jpg" class="w-full h-64 md:h-80 object-cover rounded-lg cursor-pointer" alt="Casa Zoe Community" onclick="openModal(this.src)">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/community/4.jpg" class="w-full h-64 md:h-80 object-cover rounded-lg cursor-pointer" alt="Casa Zoe Community" onclick="openModal(this.src)">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/community/5.jpg" class="w-full h-64 md:h-80 object-cover rounded-lg cursor-pointer" alt="Casa Zoe Community" onclick="openModal(this.src)">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/community/6.jpg" class="w-full h-64 md:h-80 object-cover rounded-lg cursor-pointer" alt="Casa Zoe Community" onclick="openModal(this.src)">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next text-primary"></div>
+                <div class="swiper-button-prev text-primary"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Contact Us</h2>
+                <div class="w-20 h-1 bg-accent mx-auto mb-6"></div>
+                <p class="text-lg text-secondary max-w-3xl mx-auto">
+                    We'd love to hear from you. Reach out to schedule a visit or learn more about our community.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <h3 class="text-2xl font-semibold text-primary mb-6">Send Us a Message</h3>
+                    <form id="contact-form" onsubmit="sendWhatsAppMessage(event)">
+                        <div class="mb-6">
+                            <label for="name" class="block text-secondary mb-2">Your Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent" required>
+                        </div>
+                        <div class="mb-6">
+                            <label for="email" class="block text-secondary mb-2">Your Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent" required>
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-secondary mb-2">Your Message</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent" required></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-primary hover:bg-blue-700 text-white py-3 px-6 rounded-lg font-medium transition-colors duration-300">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+                
+                <div>
+                    <div class="bg-white p-8 rounded-xl shadow-md mb-8">
+                        <h3 class="text-2xl font-semibold text-primary mb-6">Visit Us</h3>
+                        <div class="h-64 rounded-lg overflow-hidden mb-6">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3741.9958734591323!2d-103.25807812770756!3d20.300437939562997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842f46b2bf098f11%3A0x8f7cb10b8760a2a4!2sP.%C2%BA%20de%20La%20Colina%20115%2C%20La%20floresta%2C%2045920%20Ajijic%2C%20Jal.!5e0!3m2!1ses-419!2smx!4v1753846415363!5m2!1ses-419!2smx" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <i class="fas fa-map-marker-alt text-accent mt-1 mr-4"></i>
+                                <p class="text-secondary">Paseo de la Colina #115, La Floresta, Ajijic, Jalisco, Mexico</p>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-phone-alt text-accent mr-4"></i>
+                                <p class="text-secondary">+52 33 1574 2583 (WhatsApp available)</p>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-envelope text-accent mr-4"></i>
+                                <p class="text-secondary">caszoericardo@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-md">
+                        <h3 class="text-xl font-semibold text-primary mb-4">Follow Us</h3>
+                        <div class="flex space-x-4">
+                            <a href="https://www.facebook.com/profile.php?id=61559186878651&mibextid=LQQJ4d" class="w-10 h-10 bg-blue-600 hover:bg-blue-700 text-white rounded-full flex items-center justify-center transition-colors duration-300" target="_blank">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.instagram.com/casazoecare?igsh=ODdpdHZ4bTRrNW93&utm_source=qr" class="w-10 h-10 bg-pink-600 hover:bg-pink-700 text-white rounded-full flex items-center justify-center transition-colors duration-300" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://wa.me/523315742583" class="w-10 h-10 bg-green-500 hover:bg-green-600 text-white rounded-full flex items-center justify-center transition-colors duration-300" target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-3">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mt-3 pt-8 text-center text-blue-200">
+                <p>&copy; 2024 Casa Zoe Community. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center hidden">
+        <div class="relative max-w-4xl w-full p-4">
+            <button onclick="closeModal()" class="absolute -top-12 right-0 text-white text-3xl hover:text-accent transition-colors">
+                <i class="fas fa-times"></i>
+            </button>
+            <img id="modalImage" src="" alt="" class="w-full max-h-screen object-contain">
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
+        // Smooth scrolling for all links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Initialize Swiper
+        const swiper = new Swiper(".mySwiper", {
+            loop: true,
+            spaceBetween: 20,
+            slidesPerView: 1,
+            centeredSlides: true,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                },
+            },
+        });
+
+        // Image modal functions
+        function openModal(src) {
+            document.getElementById('modalImage').src = src;
+            document.getElementById('imageModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('imageModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside the image
+        document.getElementById('imageModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+
+        // WhatsApp message function
+        function sendWhatsAppMessage(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            const whatsappMessage = `Name: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
+            const whatsappUrl = `https://wa.me/523315742583?text=${whatsappMessage}`;
+            
+            window.open(whatsappUrl, '_blank');
+        }
+    </script>
+</body>
+</html>
